@@ -1,2 +1,5 @@
+
 # Keep your basement dry - WITHOUT electricity costs
-Keep your basement dry - WITHOUT electricity costs with the "Digital 2-in-1 Dehumidifier" (Sichler electric dehumidifier, dehumidifier & air purifier model: LFT-200) => Control the dehumidifier via Tasmota socket and Node-Red, Mosquitto via MQTT on a Raspberry Pi. Switching times are based on adjustable thresholds for battery charge and PV feed-in.
+Keep your basement dry - WITHOUT electricity costs with an "Digital 2-in-1 Dehumidifier" (Sichler electric dehumidifier, dehumidifier & air purifier model: LFT-200)  
+=> Control the dehumidifier trough a Tasmota socket and Node-Red, Mosquitto via MQTT on a Raspberry Pi. Switching times are based on adjustable thresholds for battery charge and PV feed-in.
+
