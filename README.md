@@ -7,3 +7,9 @@ If you have the problem that a room in your basement is damp, this project might
 Keep your basement dry - WITHOUT electricity costs with an "Digital 2-in-1 Dehumidifier" (Sichler electric dehumidifier, dehumidifier & air purifier model: LFT-200 or any other dehumidifier of your choice thas can be switched on / off via the powercord)  
 => Control the dehumidifier trough a Tasmota socket and Node-Red, Mosquitto via MQTT on a Raspberry Pi. Switching times are based on adjustable thresholds for battery charge and PV feed-in.
 
+## Requirements:  
+- Raspberrypi with Node-Red with Dashboard and Mosquitto MQTT Broker installed
+- PV system with batteries: home power station E3/DC  
+- RSCP2MQTT installed on the Raspi [(https://github.com/pvtom/rscp2mqtt)] to get Values from the Station  
+- Tasmota socket with MQTT switched on and configured for the Mosquitto Broker  
+- "Digital 2-in-1 Dehumidifier" or any other Dehumidifier
