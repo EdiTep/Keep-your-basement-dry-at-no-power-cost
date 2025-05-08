@@ -17,9 +17,10 @@ Keep your basement dry - WITHOUT electricity costs with an "Digital 2-in-1 Dehum
 ## The Dehumidifier i´m using:
 
 <p align="center">
-  <img src="Dehumidifier LFT-200.jpg" alt="Picture of the Dehumidifier" width="600"/>
+  <img src="Dehumidifier LFT-200.jpg" alt="Picture of the Dehumidifier" width="400"/>
 </p>  
 
+[Shop where you can buy the Dehumidifier](https://www.pearl.de/a-ZX6621-3037.shtml;jsessionid=eB8477A950441CEC8498534AE405685FD?vid=953&curr=DEM)  
 
 ## Installation
 Verify that the above Requirements are met.    
@@ -35,4 +36,4 @@ If the adjusted Values are reached, the Dehumidifier will start working and dryi
 This project is licensed under the MIT License.
 
 ## Contact
-For questions or improvements, feel free to open an issue on GitHub or submit a pull request.
+For questions or improvements, feel free to open an issue on GitHub or submit a pull request.  
