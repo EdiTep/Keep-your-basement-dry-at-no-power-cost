@@ -12,4 +12,27 @@ Keep your basement dry - WITHOUT electricity costs with an "Digital 2-in-1 Dehum
 - PV system with batteries: home power station E3/DC  
 - RSCP2MQTT installed on the Raspi [(https://github.com/pvtom/rscp2mqtt)] to get Values from the Station  
 - Tasmota socket with MQTT switched on and configured for the Mosquitto Broker  
-- "Digital 2-in-1 Dehumidifier" or any other Dehumidifier
+- "Digital 2-in-1 Dehumidifier" or any other Dehumidifier which can be controlled with the Tasmota plug  
+
+## The Dehumidifier i´m using:
+
+<p align="center">
+  <img src="Dehumidifier LFT-200.jpg" alt="Picture of the Dehumidifier" width="600"/>
+</p>  
+
+
+## Installation
+Verify that the above Requirements are met.    
+Import the flow into Node-RED.  
+Make corrections in the Nodes for your System:  
+Activate and test the flow.  
+
+## Usage
+The flow runs automatically in the background and monitors the incoming values form the PV System.  
+If the adjusted Values are reached, the Dehumidifier will start working and drying the Air. If the values are not met it will stop.  
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+For questions or improvements, feel free to open an issue on GitHub or submit a pull request.
