@@ -17,7 +17,7 @@ Keep your basement dry - WITHOUT electricity costs with an "Digital 2-in-1 Dehum
 ## The Dehumidifier i´m using:
 
 <p align="center">
-  <img src="Dehumidifier LFT-200.jpg" alt="Picture of the Dehumidifier" width="400"/>
+  <img src="pictures/Dehumidifier LFT-200.jpg" alt="Picture of the Dehumidifier" width="400"/>
 </p>  
 
 [Shop where you can buy the Dehumidifier](https://www.pearl.de/a-ZX6621-3037.shtml;jsessionid=eB8477A950441CEC8498534AE405685FD?vid=953&curr=DEM)  
