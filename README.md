@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="EdisBlog-Logo.png" alt="Logo edi.teppert.com Blog" width="600"/>
+  <img src="pictures/Edis-Blog-Logo.png" alt="Logo edi.teppert.com Blog" width="600"/>
 </p>  
 
 # Keep your basement dry - WITHOUT electricity costs
