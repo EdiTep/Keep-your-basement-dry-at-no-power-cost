@@ -1,0 +1,1491 @@
+[
+    {
+        "id": "fad7798580148e6d",
+        "type": "group",
+        "z": "948162f7d59a232b",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "583b3ec8361b0d57",
+            "ce37ef6376ea9cbd",
+            "9d4c97bac4e78834",
+            "9778e2d3b6ddfde3",
+            "9e81875bb6f772ae",
+            "c8fc51cc976d5145",
+            "d6cca2c7d8a638ae",
+            "941d64c42315d5e0",
+            "0561233652a0c2ec",
+            "9014b5d738340d20",
+            "259161055f18a4fe",
+            "4d48d19951742a23",
+            "a8e2f5579f63a2dc",
+            "3d43bdd7cc178da7",
+            "ea0f64baaf4ee614",
+            "f85966c927494ebf",
+            "af1dba1b40291188",
+            "6dc5cfa56fcfb6ce",
+            "2676a2ac0cc7cdb2",
+            "071e45791b47638e",
+            "aea6342fca8fc732",
+            "4b748d6f4a591fcd",
+            "34a689110f39bec0",
+            "66292c2c9a6fd73f",
+            "f513bdd86824f53c",
+            "d49ed54c7e4f157a",
+            "cf032cb70ba16467",
+            "60412301b4b86494",
+            "a2b9f3f8051b8b37",
+            "fcd22b23513fa73a",
+            "3eb12635aed91f82",
+            "74ae3c73dbd474cf",
+            "eebde64123f8c40b"
+        ],
+        "x": 28,
+        "y": 879,
+        "w": 1084,
+        "h": 828
+    },
+    {
+        "id": "583b3ec8361b0d57",
+        "type": "inject",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 150,
+        "y": 960,
+        "wires": [
+            [
+                "af1dba1b40291188"
+            ]
+        ]
+    },
+    {
+        "id": "ce37ef6376ea9cbd",
+        "type": "mqtt out",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "Plug-UG-01",
+        "topic": "Haus/Keller/Tasmota/Plug-UG-01/cmnd/POWER",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "88539582a8a310de",
+        "x": 430,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "9d4c97bac4e78834",
+        "type": "inject",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 150,
+        "y": 1000,
+        "wires": [
+            [
+                "f85966c927494ebf"
+            ]
+        ]
+    },
+    {
+        "id": "9778e2d3b6ddfde3",
+        "type": "ui_led",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "order": 2,
+        "group": "7481342d26c171a1",
+        "width": 3,
+        "height": 2,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "AUS",
+                "valueType": "str"
+            },
+            {
+                "color": "#00f900",
+                "value": "AN",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Steckdose UG 01 an / aus",
+        "x": 880,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "9e81875bb6f772ae",
+        "type": "ui_toast",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "position": "bottom left",
+        "displayTime": "3",
+        "highlight": "yellow",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "Steckdose UG 01 AN / AUS",
+        "name": "Steckdose UG 01 wurde geschaltet",
+        "x": 900,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "c8fc51cc976d5145",
+        "type": "mqtt in",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "Plug UG 01 SENSOR",
+        "topic": "Haus/Keller/Tasmota/Plug-UG-01/SENSOR",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "88539582a8a310de",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 1100,
+        "wires": [
+            [
+                "0561233652a0c2ec",
+                "259161055f18a4fe",
+                "9014b5d738340d20",
+                "4d48d19951742a23",
+                "071e45791b47638e",
+                "34a689110f39bec0"
+            ]
+        ]
+    },
+    {
+        "id": "d6cca2c7d8a638ae",
+        "type": "debug",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "Spannung",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "941d64c42315d5e0",
+        "type": "comment",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "Tasmota Steckdose UG-01 steuern / auswerten - Keller Luftentfeuchter",
+        "info": "",
+        "x": 330,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "0561233652a0c2ec",
+        "type": "change",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "ENERGY.Voltage",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.ENERGY.Voltage",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 1100,
+        "wires": [
+            [
+                "d6cca2c7d8a638ae",
+                "2676a2ac0cc7cdb2"
+            ]
+        ]
+    },
+    {
+        "id": "9014b5d738340d20",
+        "type": "change",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "ENERGY.Total",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.ENERGY.Total",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 1140,
+        "wires": [
+            [
+                "3d43bdd7cc178da7",
+                "6dc5cfa56fcfb6ce"
+            ]
+        ]
+    },
+    {
+        "id": "259161055f18a4fe",
+        "type": "debug",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "SENSOR",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 180,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "4d48d19951742a23",
+        "type": "change",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "ENERGY.ApparentPower",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.ENERGY.ApparentPower",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 1180,
+        "wires": [
+            [
+                "a8e2f5579f63a2dc",
+                "ea0f64baaf4ee614",
+                "74ae3c73dbd474cf"
+            ]
+        ]
+    },
+    {
+        "id": "a8e2f5579f63a2dc",
+        "type": "debug",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "Watt VA",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "3d43bdd7cc178da7",
+        "type": "debug",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "Gesamt Verbrauch",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "ea0f64baaf4ee614",
+        "type": "ui_gauge",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "Aktueller Verbrauch Watt",
+        "group": "7481342d26c171a1",
+        "order": 3,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Aktueller Verbrauch Watt",
+        "label": "Watt",
+        "format": "{{value}} Watt",
+        "min": 0,
+        "max": "150",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 690,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "f85966c927494ebf",
+        "type": "ui_button",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "",
+        "group": "7481342d26c171a1",
+        "order": 6,
+        "width": 1,
+        "height": 2,
+        "passthru": false,
+        "label": "AUS",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "radio_button_unchecked",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 270,
+        "y": 1000,
+        "wires": [
+            [
+                "ce37ef6376ea9cbd",
+                "60412301b4b86494"
+            ]
+        ]
+    },
+    {
+        "id": "af1dba1b40291188",
+        "type": "ui_button",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "",
+        "group": "7481342d26c171a1",
+        "order": 1,
+        "width": 1,
+        "height": 2,
+        "passthru": false,
+        "label": "AN",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "radio_button_checked",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 270,
+        "y": 960,
+        "wires": [
+            [
+                "ce37ef6376ea9cbd",
+                "60412301b4b86494"
+            ]
+        ]
+    },
+    {
+        "id": "6dc5cfa56fcfb6ce",
+        "type": "ui_chart",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "Gesamt Verbrauch kWh",
+        "group": "7481342d26c171a1",
+        "order": 5,
+        "width": 4,
+        "height": 2,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 690,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2676a2ac0cc7cdb2",
+        "type": "ui_text",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "group": "7481342d26c171a1",
+        "order": 7,
+        "width": 3,
+        "height": 2,
+        "name": "Spannung",
+        "label": "",
+        "format": "{{msg.payload}} Volt",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 650,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "071e45791b47638e",
+        "type": "change",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "ENERGY.Power",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.ENERGY.Power",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 1220,
+        "wires": [
+            [
+                "aea6342fca8fc732",
+                "4b748d6f4a591fcd"
+            ]
+        ]
+    },
+    {
+        "id": "aea6342fca8fc732",
+        "type": "debug",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "kWh aktuell",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "4b748d6f4a591fcd",
+        "type": "ui_chart",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "Aktueller Verbrauch kWh",
+        "group": "7481342d26c171a1",
+        "order": 8,
+        "width": 4,
+        "height": 2,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "2",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 690,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "34a689110f39bec0",
+        "type": "change",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "ENERGY.Current",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.ENERGY.Current",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 1260,
+        "wires": [
+            [
+                "66292c2c9a6fd73f",
+                "f513bdd86824f53c"
+            ]
+        ]
+    },
+    {
+        "id": "66292c2c9a6fd73f",
+        "type": "debug",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "A aktuell",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "f513bdd86824f53c",
+        "type": "ui_gauge",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "",
+        "group": "7481342d26c171a1",
+        "order": 4,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Verbrauch Ampere",
+        "label": "Ampere",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "16",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 670,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "d49ed54c7e4f157a",
+        "type": "mqtt in",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "Plug UG 01 STATE",
+        "topic": "Haus/Keller/Tasmota/Plug-UG-01/STATE",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "88539582a8a310de",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 1040,
+        "wires": [
+            [
+                "cf032cb70ba16467"
+            ]
+        ]
+    },
+    {
+        "id": "cf032cb70ba16467",
+        "type": "change",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "Payload POWER",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.POWER",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 1040,
+        "wires": [
+            [
+                "a2b9f3f8051b8b37"
+            ]
+        ]
+    },
+    {
+        "id": "60412301b4b86494",
+        "type": "change",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "Payload ändern",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "AN",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "AUS",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 980,
+        "wires": [
+            [
+                "9778e2d3b6ddfde3",
+                "9e81875bb6f772ae",
+                "fcd22b23513fa73a"
+            ]
+        ]
+    },
+    {
+        "id": "a2b9f3f8051b8b37",
+        "type": "change",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "Payload ändern",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "ON",
+                "fromt": "str",
+                "to": "AN",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "OFF",
+                "fromt": "str",
+                "to": "AUS",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 1040,
+        "wires": [
+            [
+                "9778e2d3b6ddfde3",
+                "fcd22b23513fa73a"
+            ]
+        ]
+    },
+    {
+        "id": "fcd22b23513fa73a",
+        "type": "link out",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "zu E3DC Akku Steuerung",
+        "mode": "link",
+        "links": [
+            "27a960d5656fdc97"
+        ],
+        "x": 925,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "3eb12635aed91f82",
+        "type": "comment",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "zur Steckdosen Akkusteuerung =>",
+        "info": "",
+        "x": 740,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "74ae3c73dbd474cf",
+        "type": "link out",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "name": "zu E3DC Watt Anzeige",
+        "mode": "link",
+        "links": [
+            "730586258fa47e1c"
+        ],
+        "x": 765,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "eebde64123f8c40b",
+        "type": "group",
+        "z": "948162f7d59a232b",
+        "g": "fad7798580148e6d",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "f1b63107694e70e9",
+            "77ba48f8cfe712a4",
+            "08ef54e5d364a46c",
+            "ecbb019e3253a182",
+            "27a960d5656fdc97",
+            "b722a788018505c6",
+            "fc4f0d8db4ecb974",
+            "730586258fa47e1c",
+            "52c954b17e7bf4d4",
+            "d6f5a61f7a31d4a3",
+            "bd65f8e29c68a970",
+            "7ccad19143598399",
+            "f9ef0d42c6c284dd",
+            "9aa1fced9b155c67",
+            "47b4a712d2b074c1",
+            "d975a2dab0f4a195",
+            "f3a3149131c8f5e3",
+            "9503b2b6e53876bb",
+            "0e12e310fd98d98d",
+            "13da3af768167c9e",
+            "d72f7580840dd0d6",
+            "6298d0e1b20bb323",
+            "561807b087ad2d02"
+        ],
+        "x": 54,
+        "y": 1299,
+        "w": 1032,
+        "h": 382
+    },
+    {
+        "id": "f1b63107694e70e9",
+        "type": "debug",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "Akku Ladung %",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 220,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "77ba48f8cfe712a4",
+        "type": "comment",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "E3DC Akkufüllmenge auswerten und Steckdose schalten um Akkus für Geräte zu laden (XX% Schwelle) - Keller Luftentfeuchter",
+        "info": "",
+        "x": 510,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "08ef54e5d364a46c",
+        "type": "ui_gauge",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "E3DC Akku Ladezustand in %",
+        "group": "070122725e128cea",
+        "order": 4,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "E3DC Akku Ladezustand in %",
+        "label": "%",
+        "format": "{{value | number:0}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ff9200",
+            "#e6e600",
+            "#00f900"
+        ],
+        "seg1": "69",
+        "seg2": "71",
+        "diff": false,
+        "className": "",
+        "x": 510,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "ecbb019e3253a182",
+        "type": "ui_led",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "order": 5,
+        "group": "070122725e128cea",
+        "width": 4,
+        "height": 2,
+        "label": "Steckdose Luftentfeuchter AN / AUS",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "AUS",
+                "valueType": "str"
+            },
+            {
+                "color": "#00f900",
+                "value": "AN",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": true,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Steckdose UG 01 an / aus",
+        "x": 940,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "27a960d5656fdc97",
+        "type": "link in",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "von Plu-EG-01",
+        "links": [
+            "fcd22b23513fa73a"
+        ],
+        "x": 785,
+        "y": 1500,
+        "wires": [
+            [
+                "ecbb019e3253a182"
+            ]
+        ]
+    },
+    {
+        "id": "b722a788018505c6",
+        "type": "comment",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "von Plug-UG-01 =>",
+        "info": "",
+        "x": 650,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "fc4f0d8db4ecb974",
+        "type": "ui_gauge",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "Aktueller Verbrauch Watt",
+        "group": "070122725e128cea",
+        "order": 1,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Luftentfeuchter Verbrauch",
+        "label": "Watt",
+        "format": "{{value | number:0}}",
+        "min": 0,
+        "max": "300",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "Stromverbrauch",
+        "x": 950,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "730586258fa47e1c",
+        "type": "link in",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "von Plug-EG-01 Watt",
+        "links": [
+            "74ae3c73dbd474cf"
+        ],
+        "x": 785,
+        "y": 1540,
+        "wires": [
+            [
+                "fc4f0d8db4ecb974"
+            ]
+        ]
+    },
+    {
+        "id": "52c954b17e7bf4d4",
+        "type": "ui_text",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "group": "070122725e128cea",
+        "order": 6,
+        "width": 4,
+        "height": 2,
+        "name": "",
+        "label": "Abschaltung unter",
+        "format": "{{msg.payload}} %",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Arial Black,Arial Black,Gadget,sans-serif",
+        "fontSize": "18",
+        "color": "#ff9200",
+        "x": 650,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "d6f5a61f7a31d4a3",
+        "type": "ui_slider",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "Schwellwert einstellen",
+        "label": "Schwellwert %",
+        "tooltip": "",
+        "group": "070122725e128cea",
+        "order": 7,
+        "width": 8,
+        "height": 2,
+        "passthru": true,
+        "outs": "end",
+        "topic": "threshold",
+        "topicType": "str",
+        "min": "20",
+        "max": 100,
+        "step": 1,
+        "className": "",
+        "x": 400,
+        "y": 1520,
+        "wires": [
+            [
+                "bd65f8e29c68a970",
+                "52c954b17e7bf4d4",
+                "47b4a712d2b074c1"
+            ]
+        ]
+    },
+    {
+        "id": "bd65f8e29c68a970",
+        "type": "function",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "Akku% Vergleich Schwellwert",
+        "func": "// Save the latest threshold value in context\nif (msg.topic === \"threshold\") {\n    context.set(\"threshold\", msg.payload);\n    return null; // Don't forward this message\n}\n\n// Get the latest threshold value\nlet threshold = context.get(\"threshold\") || 0;\n\n// Get the battery SOC value\nlet battery_soc = msg.payload;\n\n// Compare the battery SOC with the threshold\nif (battery_soc >= threshold) {\n    // Send command to turn on the plug\n    return { topic: \"Haus/Erdgeschoss/Tasmota/Plug-UG-01/cmnd/POWER\", payload: 1 };\n} else {\n    // Send command to turn off the plug\n    return { topic: \"Haus/Erdgeschoss/Tasmota/Plug-UG-01/cmnd/POWER\", payload: 0 };\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1460,
+        "wires": [
+            [
+                "7ccad19143598399",
+                "f9ef0d42c6c284dd"
+            ]
+        ]
+    },
+    {
+        "id": "7ccad19143598399",
+        "type": "debug",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "0 / 1 von Function",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 910,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "f9ef0d42c6c284dd",
+        "type": "mqtt out",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "Plug-UG-01",
+        "topic": "Haus/Keller/Tasmota/Plug-UG-01/cmnd/POWER",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "88539582a8a310de",
+        "x": 750,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "9aa1fced9b155c67",
+        "type": "mqtt in",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "",
+        "topic": "Haus/Keller/e3dc/battery/soc",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "88539582a8a310de",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 1460,
+        "wires": [
+            [
+                "bd65f8e29c68a970",
+                "f1b63107694e70e9",
+                "08ef54e5d364a46c",
+                "d975a2dab0f4a195"
+            ]
+        ]
+    },
+    {
+        "id": "47b4a712d2b074c1",
+        "type": "debug",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "Schwelle",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "d975a2dab0f4a195",
+        "type": "debug",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "Akku gesamte Meldung",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "f3a3149131c8f5e3",
+        "type": "mqtt in",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "",
+        "topic": "Haus/Keller/e3dc/battery/power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "88539582a8a310de",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 1600,
+        "wires": [
+            [
+                "d72f7580840dd0d6"
+            ]
+        ]
+    },
+    {
+        "id": "9503b2b6e53876bb",
+        "type": "ui_gauge",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "Batterie Be- Entladung in Watt",
+        "group": "070122725e128cea",
+        "order": 2,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Batterie Be- Entladung in Watt",
+        "label": "Watt",
+        "format": "{{value | number:0}}",
+        "min": "-500",
+        "max": "1000",
+        "colors": [
+            "#ff2600",
+            "#e6e600",
+            "#60c453"
+        ],
+        "seg1": "0",
+        "seg2": "400",
+        "diff": false,
+        "className": "",
+        "x": 930,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "0e12e310fd98d98d",
+        "type": "mqtt in",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "",
+        "topic": "Haus/Keller/e3dc/home/power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "88539582a8a310de",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 1640,
+        "wires": [
+            [
+                "6298d0e1b20bb323"
+            ]
+        ]
+    },
+    {
+        "id": "13da3af768167c9e",
+        "type": "ui_gauge",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "Hausverbrauch aktuell in Watt",
+        "group": "070122725e128cea",
+        "order": 3,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Hausverbrauch aktuell in Watt",
+        "label": "Watt",
+        "format": "{{value | number:0}}",
+        "min": "-0",
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 930,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "d72f7580840dd0d6",
+        "type": "function",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "Dynamische Werte für Gauge",
+        "func": "const value = msg.payload;\n\n// Rundung auf ganze Zahlen\nconst roundedValue = Math.round(value);\n\nconst absValue = Math.abs(roundedValue);\n\n// Berechnung des maxWert, 120% vom absoluten Wert, immer im positiven Bereich\nlet maxWert = Math.round(absValue * 1.2 + 200);\n\n// Berechnung des minWert, abhängig davon, ob value positiv oder negativ ist\nlet minWert = roundedValue < 0 ? Math.round(-absValue * 1.5) : Math.round(-absValue * 0.5);\n\nlet minSeg = Math.round(absValue * 0.4);  // 40% vom absoluten Wert\nlet maxSeg = Math.round(absValue * 0.8);  // 80% vom absoluten Wert\n\n// Debug-Ausgabe zur Überprüfung\nnode.warn(\"Akku Ladung - Max Wert: \" + maxWert + \", Min Wert: \" + minWert + \", Min Seg: \" + minSeg + \", Max Seg: \" + maxSeg);\n\nmsg = {\n    ui_control: {\n        gtype: \"gage\",\n        min: minWert,\n        max: maxWert,\n        colors: [\"red\", \"orange\", \"green\"],\n        seg1: minSeg,\n        seg2: maxSeg\n    },\n    // Sende die gerundeten Werte an das ui_gauge\n    payload: roundedValue\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1600,
+        "wires": [
+            [
+                "9503b2b6e53876bb"
+            ]
+        ]
+    },
+    {
+        "id": "6298d0e1b20bb323",
+        "type": "function",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "Dynamische Werte für Gauge",
+        "func": "const value = msg.payload;\n\n// Rundung auf ganze Zahlen\nconst roundedValue = Math.round(value);\n\nconst absValue = Math.abs(roundedValue);\n\n// Berechnung des maxWert, 120% vom absoluten Wert, immer im positiven Bereich\nlet maxWert = Math.round(absValue * 1.2 + 200);\n\n// Berechnung des minWert, abhängig davon, ob value positiv oder negativ ist\nlet minWert = roundedValue < 0 ? Math.round(-absValue * 1.5) : Math.round(-absValue * 0.5);\n\nlet minSeg = Math.round(absValue * 0.4);  // 40% vom absoluten Wert\nlet maxSeg = Math.round(absValue * 0.8);  // 80% vom absoluten Wert\n\n// Debug-Ausgabe zur Überprüfung\nnode.warn(\"Haus Verbrauch - Max Wert: \" + maxWert + \", Min Wert: \" + minWert + \", Min Seg: \" + minSeg + \", Max Seg: \" + maxSeg);\n\nmsg = {\n    ui_control: {\n        gtype: \"gage\",\n        min: minWert,\n        max: maxWert,\n        colors: [\"red\", \"orange\", \"green\"],\n        seg1: minSeg,\n        seg2: maxSeg\n    },\n    // Sende die gerundeten Werte an das ui_gauge\n    payload: roundedValue\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1640,
+        "wires": [
+            [
+                "13da3af768167c9e"
+            ]
+        ]
+    },
+    {
+        "id": "561807b087ad2d02",
+        "type": "inject",
+        "z": "948162f7d59a232b",
+        "g": "eebde64123f8c40b",
+        "name": "Schwelle Akku (Init)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "80",
+        "payloadType": "num",
+        "x": 190,
+        "y": 1520,
+        "wires": [
+            [
+                "d6f5a61f7a31d4a3"
+            ]
+        ]
+    },
+    {
+        "id": "070122725e128cea",
+        "type": "ui_group",
+        "name": "E3DC Akku % Ladung (LED = Steckdose AN / AUS)",
+        "tab": "39cbe7e60fb96760",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "39cbe7e60fb96760",
+        "type": "ui_tab",
+        "name": "E3DC Steuerung - Steckdosenleiste, Luftentfeuchter",
+        "icon": "check",
+        "order": 14,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "88539582a8a310de",
+        "type": "mqtt-broker",
+        "name": "Edi´s Raspi (1) Mosquitto",
+        "broker": "raspberrypi",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "7481342d26c171a1",
+        "type": "ui_group",
+        "name": "Steckdosen Schalter UG 01 - Keller Luftentfeuchter",
+        "tab": "29ec6908.552b36",
+        "order": 3,
+        "disp": true,
+        "width": 16,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "29ec6908.552b36",
+        "type": "ui_tab",
+        "name": "Tasmota Steckdose",
+        "icon": "power",
+        "order": 12,
+        "disabled": false,
+        "hidden": false
+    }
+]
